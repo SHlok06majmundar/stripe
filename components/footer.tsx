@@ -124,6 +124,7 @@ export default function Footer() {
                   <li>Hire a Professional Partner</li>
                 </ul>
               </div>
+//s           
             </div>
           </div>
 
