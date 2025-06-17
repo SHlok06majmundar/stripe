@@ -6,7 +6,7 @@ import PaymentsSection from "@/components/sections/payments-section"
 import EnterpriseSection from "@/components/sections/enterprise-section"
 import GeometricSection from "@/components/sections/geometric-section"
 import Footer from "@/components/layout/footer"
-
+//
 export default function Home() {
   return (
     <main className="min-h-screen">
