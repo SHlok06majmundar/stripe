@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.15);
+  }
+}
+
+@keyframes productPulse {
+  0%,
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+  }
+}
+
+@keyframes dashMove {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 24;
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes barPulse {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
+.StripeSet {
+  position: relative;
+  width: 100%;
+  height: 128px;
+  overflow: hidden;
+}
+
+.StripeSet--TopRight {
+  transform-origin: top right;
+}
+
+.StripeSet--layoutIntersecting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.StripeSet--alignCenter {
+  align-items: center;
+}
+
+.Stripe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.Stripe--accentNone {
+  background: none;
+}
+
+.Stripe--variantSolid {
+  opacity: 1;
+}
+
+.Stripe--variantIntersection {
+  opacity: 0.8;
+}
+
+.Stripe--insetSmall {
+  padding: 8px;
+}
+
+.Stripe--insetNone {
+  padding: 0;
+}
+
+.Stripe--widthFull {
+  width: 100%;
+}
+
+.Stripe--widthNormal {
+  width: 75%;
+}
+
+.Stripe--intersectionInsetNone {
+  margin: 0;
+}
+
+.Stripe--intersectionWidthNormal {
+  max-width: 50%;
+}
+
+.Stripe__intersection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
